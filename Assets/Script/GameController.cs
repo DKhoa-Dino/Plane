@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
     }
 
     void Update(){
-        if(restart && Input.GetKeyDown(KeyCode.R)){
+        if(restart && Input.GetKeyDown(KeyCode.S)){
             Application.LoadLevel(Application.loadedLevel);
         }
     }
@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(waveWait);
             if(gameOver){
                 restart = true;
-                restartText.text = "Press 'R' to restart";
+                restartText.text = "Press 'S' to restart";
                 break;
             }
         }
